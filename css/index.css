@@ -178,13 +178,21 @@ width: 60%;
     }
      
 }
-
 @media (max-width: 680px){
     .Header-nav{
         display: none;
     }
     .Header{
         justify-content: center;
+    }
+    .Content-section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .Content-img {
+        max-width: 100%;
     }
     .Main-p{
         max-width: 100%;
