@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+a{
+    display: block;
+}
+
+p a{
+    display: inline;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: initial;
+}
+
+:root{
+    font-size: 100%;
+    --bg-primary: white;
+    --bg-primary-dark: black;
+    --color-primary-text: black;
+    --color-secondary-text: white;
+    --color-link-dark: white;
+}
+
+/* Header */
+
+.Header{
+    /* background-color: rgb(220, 153, 35); */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 2.5rem 3.75rem;
+}
+
+.Header-img{
+width: 60%;
+}
+
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .9375rem;
+
+}
+.Header-li{
+    font-size: .9375rem;
+
+}
+.Header-a{
+    text-decoration: none;
+    color: var(--color-primary-text);
+}
+.Header-a--main{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Main */
+
+.Main{
+    width: 100%;
+    /* background-color: var(--bg-primary); */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.25rem 2.5rem;
+}
+.Main-p{
+    width: 100%;
+    max-width: 40%;
+    display: inline;
+    margin: 0 0 4.375rem .9375rem;
+}
+.Main-content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Content-section{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem;
+    margin: 0 3.125rem 1.5625rem;
+}
+.Content-img{
+    width: 100%;
+    max-width: 25%;
+}
+
+
+/* Footer */
+
+.Footer{
+    width: 100%;
+    /* background-color: bisque; */
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Footer-boton{
+    margin: 0 0 3.75rem;
+}
+.Footer-more{
+    text-decoration: none;
+    color: var(--color-primary-text);
+}
+.Footer-bottom{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3.125rem;
+}
+.Footer-copyright{
+    font-size: .625rem;
+}
+
+.Footer-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+}
+
+.Footer-a{
+    text-decoration: none;
+    color: var(--color-primary-text);
+    font-size: .75rem;
+}
+
+
+@media (prefers-color-scheme: dark){
+    body{
+      background-color: var(--bg-primary-dark);
+      color: var(--color-secondary-text);
+    }
+    .Header-a{
+        color:var(--color-secondary-text);
+      } 
+
+    .Footer-a{
+        color: var(--color-secondary-text);
+    } 
+    
+    .Footer-more{
+        color: var(--color-secondary-text);
+    }
+
+    .Header-img{
+        filter: invert(1);
+        background-image: url(../assets/logo-light.png);  
+    }
+     
+}
+
+@media (max-width: 680px){
+    .Header-nav{
+        display: none;
+    }
+    .Header{
+        justify-content: center;
+    }
+    .Main-p{
+        max-width: 100%;
+    }
+    .Footer-bottom{
+        flex-direction: column;
+        gap: 1.875rem;
+    } 
+}
+
+@media (max-width: 430px){
+    .Main-p{
+        max-width: 90%;
+    }
+}
